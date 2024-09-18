@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     environment {
-        registry = "amaydoshi/dso-lab6"
-        registryCredential = 'dockerhub'
+        registry = "nikitadevada/dso_lab6"
+        registryCredential = 'dockerhub-credentials'
         dockerImage = ''
     }
 
     stages {
         stage('Cloning Git') {
             steps {
-                git url: 'https://github.com/amay-doshi/dso-lab6.git', branch: 'main'
+                git url: 'https://github.com/nikitadevada/dso_lab6.git', branch: 'main'
             }
         }
         stage('Building Docker Image') {
